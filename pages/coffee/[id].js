@@ -84,7 +84,9 @@ const Coffee = () => {
               <PaymentForm paymentFormIsVisible={paymentFormIsVisible} setPaymentFormIsVisible={setPaymentFormIsVisible} />
             </>
           ) : (
-            <p>Loading</p>
+            <div className="flex justify-center items-center w-full h-full">
+              <span className="animate-ping w-3 h-3 rounded-full bg-gray-200"></span>
+            </div>
           )}
         </section>
         
