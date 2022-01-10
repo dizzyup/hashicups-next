@@ -124,7 +124,7 @@ export default function PaymentForm(props) {
 function SubmitButton(props) {
   
   return (
-    <button className={`${props.disabled ? 'bg-gray-200 text-black/25' : 'bg-gray-700 hover:bg-gray-800 text-white shadow-subtle'} relative flex items-center justify-between w-full h-[72px] px-8 mt-12 text-left text-white rounded-lg  group transition duration-500 ease-in-out overflow-hidden`} disabled={props.disabled}>
+    <button className={`${props.disabled ? 'bg-gray-200 text-black/25' : 'bg-black/90 hover:bg-black text-white shadow-subtle'} relative flex items-center justify-between w-full h-[72px] px-8 mt-12 text-left text-white rounded-lg  group transition duration-500 ease-in-out overflow-hidden`} disabled={props.disabled}>
       <span className={`${props.disabled ? 'opacity-0' : 'opacity-100'} absolute left-0 top-0 bottom-0 w-1/2 bg-gradient-to-r from-white/0 via-white/20 to-white/0 shimmer transition ease-in-out`}></span>
       <span className="uppercase tracking-widest text-lg">Submit payment</span>
       <span className={`${props.disabled ? 'opacity-0' : 'opacity-75 group-hover:opacity-100'} flex items-center invert group-hover:translate-x-[8px] transition duration-500 ease-in-out`}>

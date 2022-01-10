@@ -5,6 +5,7 @@ import InfoIcon from '@hashicorp/flight-icons/svg/info-16.svg'
 import DocsIcon from '@hashicorp/flight-icons/svg/docs-link-16.svg'
 import LearnIcon from '@hashicorp/flight-icons/svg/learn-link-16.svg'
 import GitHubIcon from '@hashicorp/flight-icons/svg/github-16.svg'
+import GlobeIcon from '@hashicorp/flight-icons/svg/globe-16.svg'
 
 export default function Footer() {
   
@@ -23,7 +24,7 @@ export default function Footer() {
             <li className="flex flex-auto">
               <Link href="#">
                 <a className="flex items-center space-x-2 flex-1 px-8 py-6 bg-white hover:bg-gray-50 transition ease-in-out">
-                  <Image src={LearnIcon} className="opacity-75" />
+                  <span className="flex items-center opacity-75 flex-shrink-0"><Image src={LearnIcon} /></span>
                   <span>Visit HashiCups on Learn</span>
                 </a>
               </Link>
@@ -31,7 +32,7 @@ export default function Footer() {
             <li className="flex flex-auto">
               <Link href="#">
                 <a className="flex items-center space-x-2 flex-1 px-8 py-6 bg-white hover:bg-gray-50 transition ease-in-out">
-                  <Image src={GitHubIcon} className="opacity-75" />
+                  <span className="flex items-center opacity-75 flex-shrink-0"><Image src={GitHubIcon} /></span>
                   <span>Browse on GitHub</span>
                 </a>
               </Link>
@@ -39,12 +40,19 @@ export default function Footer() {
             <li className="flex flex-auto">
               <Link href="#">
                 <a className="flex items-center space-x-2 flex-1 px-8 py-6 bg-white hover:bg-gray-50 transition ease-in-out">
-                  <Image src={DocsIcon} className="opacity-75" />
+                  <span className="flex items-center opacity-75 flex-shrink-0"><Image src={DocsIcon} /></span>
                   <span>Visit HashiCups Docs</span>
                 </a>
               </Link>
             </li>
-            <li className="hidden xl:flex px-8 py-6 bg-white"></li>
+            <li className="flex flex-auto">
+              <Link href="#">
+                <a className="flex items-center space-x-2 flex-1 px-8 py-6 bg-white hover:bg-gray-50 transition ease-in-out">
+                  <span className="flex items-center opacity-75 flex-shrink-0"><Image src={GlobeIcon} /></span>
+                  <span>Visit HashiCorp.com</span>
+                </a>
+              </Link>
+            </li>
           </ul>
         </div>
       </aside>

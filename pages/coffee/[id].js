@@ -76,7 +76,7 @@ const Coffee = () => {
                 
                 <div className="flex flex-col w-full space-y-6 md:space-y-0">
                   <p className="font-serif text-4xl sm:text-5xl md:p-8 md:mb-4"><NumberFormat displayType={'text'} format="$#.##" value={data.price} /></p>
-                  <PayButton paymentFormIsVisible={paymentFormIsVisible} setPaymentFormIsVisible={setPaymentFormIsVisible} />
+                  <PayButton color={data.color} id={data.id} paymentFormIsVisible={paymentFormIsVisible} setPaymentFormIsVisible={setPaymentFormIsVisible} />
                 </div>
                 
               </article>
@@ -135,7 +135,7 @@ function NextCoffee(props) {
 
 function HoverLink(props) {
   return (
-    <Link href={`/coffee/${props.id}`}>
+    <Link href={`/coffee/${props.id}`} scroll={false}>
       <a className="relative group">
         <span className={`${props.direction == 'next' ? 'translate-x-[-10px]' : 'translate-x-[10px]'} absolute left-1/2 top-1/2 w-16 h-16 -ml-8 -mt-8 flex items-center justify-center bg-black/75 backdrop-blur-md shadow-high rounded-full opacity-0 group-hover:opacity-100 scale-95 group-hover:scale-100 group-hover:translate-x-0 z-20 transition duration-500 ease-in-out`}>
           <Image src={props.icon} className="invert" />

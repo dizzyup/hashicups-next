@@ -43,7 +43,7 @@ function CoffeeMenuItem(props) {
         </li>
       ) : (
         <li className="flex flex-shrink-0">
-          <Link href={`/coffee/${props.coffee.id}`}>
+          <Link href={`/coffee/${props.coffee.id}`} scroll={false}>
             <a className="relative flex flex-col items-center group">
               <img className={`${activeState ? 'scale-125' : 'scale-100'} flex-shrink-0 group-hover:scale-125 transition ease-in-out duration-500`} src={`/images/thumbnails${props.coffee.image}`} width={120} height={120} />
               <span className="absolute left-1/2 bottom-2 translate-x-[-50%] translate-y-[4px] group-hover:translate-y-0 whitespace-nowrap text-black/75 uppercase text-[10px] tracking-widest text-center bg-gray-50 backdrop-blur-md py-0.5 px-2 shadow-low rounded-full opacity-0 group-hover:opacity-100 transition ease-in-out duration-500 hover:delay-500">{`${props.coffee.name}`}</span>
