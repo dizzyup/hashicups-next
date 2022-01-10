@@ -13,3 +13,17 @@ body {
 .icon-red {
   filter: invert(17%) sepia(42%) saturate(7010%) hue-rotate(3deg) brightness(110%) contrast(132%);
 }
+
+.shimmer {
+  animation: shimmer-move 2s ease infinite;
+}
+
+@keyframes shimmer-move {
+  0% {
+    transform:translateX(-200%)
+  }
+
+  to {
+    transform:translateX(200%)
+  }
+}

@@ -24,6 +24,8 @@ export default function PaymentForm(props) {
   const [cvcNumber, setCvcNumber] = useState('');
     
   const timer = useRef(null);
+  
+  const formComplete = cardholderName != "" && cardNumber != "" && expiryDate != "" && cvcNumber != "";
     
   const dismiss = async (event) => {
     props.setPaymentFormIsVisible(false);
@@ -99,8 +101,8 @@ export default function PaymentForm(props) {
             <Field value={expiryDate} setter={setExpiryDate} id="expiry" type="cardexpiry" label="Expiry Date*" placeholder="MM/YYYY" />
             <Field value={cvcNumber} setter={setCvcNumber} id="cvc" type="cardcvc" label="CVC*" placeholder="***" />
           </fieldset>
-          
-          <SubmitButton />
+                    
+          <SubmitButton disabled={!formComplete} />
         </form>
       </div>
       
@@ -122,9 +124,10 @@ export default function PaymentForm(props) {
 function SubmitButton(props) {
   
   return (
-    <button className="flex items-center justify-between w-full h-[72px] px-8 mt-12 text-left bg-gray-700 hover:bg-gray-800 text-white rounded-lg group transition duration-500 ease-in-out">
+    <button className={`${props.disabled ? 'bg-gray-200 text-black/25' : 'bg-gray-700 hover:bg-gray-800 text-white shadow-subtle'} relative flex items-center justify-between w-full h-[72px] px-8 mt-12 text-left text-white rounded-lg  group transition duration-500 ease-in-out overflow-hidden`} disabled={props.disabled}>
+      <span className={`${props.disabled ? 'opacity-0' : 'opacity-100'} absolute left-0 top-0 bottom-0 w-1/2 bg-gradient-to-r from-white/0 via-white/20 to-white/0 shimmer transition ease-in-out`}></span>
       <span className="uppercase tracking-widest text-lg">Submit payment</span>
-      <span className="flex items-center invert opacity-75 group-hover:opacity-100 group-hover:translate-x-[8px] transition duration-500 ease-in-out">
+      <span className={`${props.disabled ? 'opacity-0' : 'opacity-75 group-hover:opacity-100'} flex items-center invert group-hover:translate-x-[8px] transition duration-500 ease-in-out`}>
         <Image src={ChevronsIcon} />
       </span>
     </button>
