@@ -17,9 +17,12 @@ module.exports = {
       },
       boxShadow: {
         fold: "-1px 0 0 rgba(0, 0, 0, .05)",
+        darkFold: "-1px 0 0 rgba(255, 255, 255, .05)",
         crease: "0 -1px 0 rgba(0, 0, 0, .05)",
+        darkCrease: "0 -1px 0 rgba(255, 255, 255, .05)",
         stroke: "0 0 0 1px rgba(0, 0, 0, .1)",
         highlight: "0 0 0 1px rgba(255, 255, 255, .1)",
+        glare: "0 0 0 1px rgba(255, 255, 255, .25)",
         subtle: "0 1px 3px rgba(0, 0, 0, .2)",
         low: "0 1px 3px rgba(0, 0, 0, .03), 0 16px 24px rgba(0, 0, 0, .01)",
         mid: "0 1px 3px rgba(0, 0, 0, .05), 0 16px 24px rgba(0, 0, 0, .02)",
