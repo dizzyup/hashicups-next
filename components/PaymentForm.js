@@ -143,7 +143,7 @@ function PaymentStatus(props) {
         <p className="text-black/75 dark:text-white/75">(But not taken, because this is just a demo)</p>
       </div>
       
-      <div className="flex flex-col items-start space-y-2 pb-5 mb-5 border-b border-gray-200">
+      <div className="flex flex-col items-start space-y-2 pb-5 mb-5 border-b border-gray-200 dark:border-white/10">
         <p className="text-black/75 dark:text-white/75">Status</p>
         <p className="flex space-x-3 text-lg">
           <Image src={CheckIcon} className="icon-green" />
