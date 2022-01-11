@@ -11,7 +11,7 @@ export default function Header() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       
-      <header className="relative z-20 flex flex-col items-center justify-center bg-white shadow-mid h-[164px]">
+      <header className="relative z-20 flex flex-col items-center justify-center bg-white dark:bg-black/50 shadow-mid dark:shadow-highlight h-[164px]">
         <Link href="/">
           <a className="cursor-pointer">
             <Image src="/images/logo.svg" height={98} width={98} />

@@ -12,7 +12,7 @@ export default function PayButton(props) {
   
   return (
     <button className={`${isVault ? 'text-black' : 'text-white'} relative flex items-center justify-between w-full h-[72px] px-8 text-left rounded-lg shadow-low group transition duration-500 ease-in-out overflow-hidden`} onClick={handleClick} style={{backgroundColor: `${props.color}`}}>
-      <span className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-black/10 transition duration-500 ease-in-out rounded-lg"></span>
+      <span className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-black/20 transition duration-500 ease-in-out rounded-lg mix-blend-overlay"></span>
       <span className="absolute left-0 top-0 bottom-0 w-1/2 bg-gradient-to-r from-white/0 via-white/20 to-white/0 shimmer"></span>
       <span className="relative uppercase tracking-widest text-lg">Purchase now</span>
       <span className={`${!isVault && 'invert'} flex items-center opacity-75 group-hover:opacity-100 group-hover:translate-x-[8px] transition duration-500 ease-in-out`}>

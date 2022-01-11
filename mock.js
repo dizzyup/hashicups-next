@@ -1,8 +1,8 @@
 export const coffees = [
   {
     id: 1,
-    color: "#000",
-    name: "HashiCup",
+    color: "#444",
+    name: "HCP Aeropress",
     teaser: "Automation in a cup",
     description: "",
     price: 200,
@@ -56,7 +56,7 @@ export const coffees = [
   {
     id: 6,
     color: "#0E67ED",
-    name: "Vagranté Espresso",
+    name: "Vagrante Espresso",
     teaser: "Stdin is not a tty",
     description: "",
     price: 200,

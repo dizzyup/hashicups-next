@@ -6,6 +6,12 @@ body {
   background: #F8F8F8;
 }
 
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #171717;
+  }
+}
+
 .icon-green {
   filter: invert(60%) sepia(38%) saturate(5616%) hue-rotate(55deg) brightness(95%) contrast(101%);
 }

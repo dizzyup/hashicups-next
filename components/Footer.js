@@ -10,56 +10,40 @@ import GlobeIcon from '@hashicorp/flight-icons/svg/globe-16.svg'
 export default function Footer() {
   
   return (
-    <footer className="flex flex-col items-center justify-center w-full px-8 bg-white/50 shadow-low">
+    <footer className="flex flex-col items-center justify-center w-full px-8 bg-white/50 dark:bg-black/50 shadow-low dark:shadow-highlight">
       <aside className="grid xl:grid-cols-2 gap-8 xl:gap-12 max-w-[1080px] w-full py-12">
-        <div className="flex flex-col justify-center px-8 py-6 bg-white rounded-xl shadow-high space-y-4">
-          <h4 className="flex items-center space-x-2 font-medium text-sm">
-            <Image src={InfoIcon} className="opacity-75" />
+        <div className="flex flex-col justify-center px-8 py-6 bg-white dark:bg-white/5 dark:text-white/90 rounded-xl shadow-high dark:shadow-highlight space-y-2">
+          <h4 className="flex items-center space-x-2 font-medium text-lg">
             <span>What is HashiCups?</span>
           </h4>
           <p className="text-sm">HashiCups is a demo app for the HashiCorp stack. If you're seeing this page, your demo is up and running!</p>
         </div>
-        <div className="bg-white rounded-xl shadow-high space-y-2 overflow-hidden">
-          <ul className="flex flex-col md:flex-row xl:grid gap-px grid-cols-2 grid-rows-2 text-sm bg-gray-100">
-            <li className="flex flex-auto">
-              <Link href="#">
-                <a className="flex items-center space-x-2 flex-1 px-8 py-6 bg-white hover:bg-gray-50 transition ease-in-out">
-                  <span className="flex items-center opacity-75 flex-shrink-0"><Image src={LearnIcon} /></span>
-                  <span>Visit HashiCups on Learn</span>
-                </a>
-              </Link>
-            </li>
-            <li className="flex flex-auto">
-              <Link href="#">
-                <a className="flex items-center space-x-2 flex-1 px-8 py-6 bg-white hover:bg-gray-50 transition ease-in-out">
-                  <span className="flex items-center opacity-75 flex-shrink-0"><Image src={GitHubIcon} /></span>
-                  <span>Browse on GitHub</span>
-                </a>
-              </Link>
-            </li>
-            <li className="flex flex-auto">
-              <Link href="#">
-                <a className="flex items-center space-x-2 flex-1 px-8 py-6 bg-white hover:bg-gray-50 transition ease-in-out">
-                  <span className="flex items-center opacity-75 flex-shrink-0"><Image src={DocsIcon} /></span>
-                  <span>Visit HashiCups Docs</span>
-                </a>
-              </Link>
-            </li>
-            <li className="flex flex-auto">
-              <Link href="#">
-                <a className="flex items-center space-x-2 flex-1 px-8 py-6 bg-white hover:bg-gray-50 transition ease-in-out">
-                  <span className="flex items-center opacity-75 flex-shrink-0"><Image src={GlobeIcon} /></span>
-                  <span>Visit HashiCorp.com</span>
-                </a>
-              </Link>
-            </li>
+        <div className="rounded-xl shadow-high dark:shadow-highlight space-y-2 overflow-hidden">
+          <ul className="flex flex-col md:flex-row xl:grid gap-px grid-cols-2 grid-rows-2 text-sm bg-gray-100 dark:bg-white/10">
+            <ExternalLink label="Visit HashiCups on Learn" icon={LearnIcon} url="#" />
+            <ExternalLink label="Browse on GitHub" icon={GitHubIcon} url="#" />
+            <ExternalLink label="Visit HashiCups Docs" icon={DocsIcon} url="#" />
+            <ExternalLink label="Visit HashiCorp.com" icon={GlobeIcon} url="https://hashicorp.com" />
           </ul>
         </div>
       </aside>
-      <div className="flex items-center justify-center w-screen bg-gray-200/50 py-6">
-        <p className="text-sm text-black/75">{Copyright()}</p>
+      <div className="flex items-center justify-center w-screen bg-gray-200/50 dark:bg-black/50 py-6">
+        <p className="text-sm text-black/75 dark:text-white/75">{Copyright()}</p>
       </div>
     </footer>
+  )
+}
+
+function ExternalLink(props) {
+  return (
+    <li className="flex flex-auto">
+      <Link href={props.url}>
+        <a className="flex items-center space-x-2 flex-1 px-8 py-6 bg-white dark:bg-black/30 hover:bg-gray-50 dark:hover:bg-black/20 dark:text-white/90 transition ease-in-out">
+          <span className="flex items-center opacity-75 flex-shrink-0 dark:invert"><Image src={props.icon} /></span>
+          <span>{props.label}</span>
+        </a>
+      </Link>
+    </li>
   )
 }
 
