@@ -24,6 +24,29 @@ body {
   animation: shimmer-move 2s ease infinite;
 }
 
+.scroll-style::-webkit-scrollbar {
+  width: 29px;
+  height: 29px;
+}
+
+.scroll-style::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scroll-style::-webkit-scrollbar-thumb {
+  border: 12px solid transparent;
+  background: #d4d4d4;
+  border-radius: 32px;
+  background-clip: content-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  .scroll-style::-webkit-scrollbar-thumb {
+    background: #737373;
+    background-clip: content-box;
+  }
+}
+
 @keyframes shimmer-move {
   0% {
     transform:translateX(-200%)
