@@ -29,7 +29,7 @@ export const coffees = [
   },
   {
     id: 3,
-    color: "#FFDD04",
+    color: "#FFD814",
     name: "Vaulatte",
     teaser: "Nothing gives you a safe and secure feeling like a Vaulatte",
     description: "",

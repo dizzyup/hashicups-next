@@ -20,10 +20,10 @@ export default function Footer() {
         </div>
         <div className="rounded-xl shadow-high dark:shadow-highlight space-y-2 overflow-hidden">
           <ul className="flex flex-col md:flex-row xl:grid gap-px grid-cols-2 grid-rows-2 text-sm bg-gray-100 dark:bg-white/10">
-            <ExternalLink label="Visit HashiCups on Learn" icon={LearnIcon} url="#" />
-            <ExternalLink label="Browse on GitHub" icon={GitHubIcon} url="#" />
-            <ExternalLink label="Visit HashiCups Docs" icon={DocsIcon} url="#" />
+            <ExternalLink label="Visit HashiCorp on Learn" icon={LearnIcon} url="http://learn.hashicorp.com" />
+            <ExternalLink label="Visit HashiCorp Docs" icon={DocsIcon} url="#" />
             <ExternalLink label="Visit HashiCorp.com" icon={GlobeIcon} url="https://hashicorp.com" />
+            <ExternalLink label="Browse on GitHub" icon={GitHubIcon} url="https://github.com/hashicorp-demoapp" />
           </ul>
         </div>
       </aside>
