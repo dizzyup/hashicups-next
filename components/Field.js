@@ -42,7 +42,7 @@ function Input(props) {
   
   if (props.type != 'text') {
     content = <NumberFormat 
-                className={`${!props.isFocused && 'placeholder:text-black/0'} w-full py-3 bg-transparent border-b border-gray-200 dark:border-white/25 focus:border-gray-700 dark:focus:border-white/75 dark:text-white outline-none transition`}
+                className={`${!props.isFocused && 'placeholder:text-black/0'} w-full py-3 bg-transparent border-b border-gray-200 dark:border-white/25 focus:border-gray-700 dark:focus:border-white/75 dark:text-white rounded-none outline-none transition`}
                 format={format}
                 id={props.id} 
                 value={props.value} 
@@ -53,7 +53,7 @@ function Input(props) {
               />
   } else {
     content = <input 
-                className={`${!props.isFocused && 'placeholder:text-black/0'} w-full py-3 bg-transparent border-b border-gray-200 dark:border-white/25 focus:border-gray-700 dark:focus:border-white/75 dark:text-white outline-none transition`}
+                className={`${!props.isFocused && 'placeholder:text-black/0'} w-full py-3 bg-transparent border-b border-gray-200 dark:border-white/25 focus:border-gray-700 dark:focus:border-white/75 dark:text-white rounded-none outline-none transition`}
                 id={props.id} 
                 type={props.type} 
                 value={props.value}

@@ -75,7 +75,7 @@ export default function PaymentForm(props) {
   }, []);
   
   return (
-    <div className={`${props.paymentFormIsVisible ? 'opacity-100 scale-100 bg-white xs:bg-transparent' : 'opacity-0 scale-95 pointer-events-none'} fixed xs:absolute inset-4 xs:inset-0 rounded-xl xs:rounded-none shadow-high xs:shadow-none flex flex-col xs:items-center xs:justify-center transition duration-500 ease-in-out z-20`}>
+    <div className={`${props.paymentFormIsVisible ? 'opacity-100 scale-100 bg-white dark:bg-black xs:bg-transparent dark:xs:bg-transparent' : 'opacity-0 scale-95 pointer-events-none'} fixed xs:absolute inset-4 xs:inset-0 rounded-xl xs:rounded-none shadow-high dark:shadow-highlight xs:shadow-none dark:xs:shadow-none flex flex-col xs:items-center xs:justify-center transition duration-500 ease-in-out z-20`}>
     
       <div className={`${isPaying ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'} absolute inset-0 flex flex-col xs:items-center xs:justify-center transition duration-500 ease-in-out pt-24 xs:pt-[120px] md:pt-0 overflow-scroll xs:overflow-hidden`}>
         <form className="flex flex-col w-full max-w-[460px] px-8 xs:px-0" onSubmit={submit}>
