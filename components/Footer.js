@@ -10,7 +10,7 @@ import GlobeIcon from '@hashicorp/flight-icons/svg/globe-16.svg'
 export default function Footer() {
   
   return (
-    <footer className="flex flex-col items-center justify-center w-full px-8 bg-white/50 dark:bg-black/50 shadow-low dark:shadow-highlight">
+    <footer className="flex flex-col items-center justify-center w-full px-8 bg-white/50 dark:bg-black/50 shadow-mid dark:shadow-highlight">
       <aside className="grid xl:grid-cols-2 gap-8 xl:gap-12 max-w-[1080px] w-full py-12">
         <div className="flex flex-col justify-center px-8 py-6 bg-white dark:bg-white/5 dark:text-white/90 rounded-xl shadow-high dark:shadow-highlight space-y-2">
           <h4 className="flex items-center space-x-2 font-medium text-lg">

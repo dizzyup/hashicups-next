@@ -24,9 +24,14 @@ body {
   animation: shimmer-move 2s ease infinite;
 }
 
+.scroll-style {
+  background-clip: border-box;
+}
+
 .scroll-style::-webkit-scrollbar {
   width: 29px;
   height: 29px;
+  background: transparent;
 }
 
 .scroll-style::-webkit-scrollbar-track {

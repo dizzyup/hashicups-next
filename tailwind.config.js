@@ -25,7 +25,7 @@ module.exports = {
         glare: "0 0 0 1px rgba(255, 255, 255, .25)",
         subtle: "0 1px 3px rgba(0, 0, 0, .2)",
         low: "0 1px 3px rgba(0, 0, 0, .03), 0 16px 24px rgba(0, 0, 0, .01)",
-        mid: "0 1px 3px rgba(0, 0, 0, .05), 0 16px 24px rgba(0, 0, 0, .02)",
+        mid: "0 0 0 1px rgba(0, 0, 0, .03), 0 1px 3px rgba(0, 0, 0, .05), 0 16px 24px rgba(0, 0, 0, .02)",
         high: "0 0 0 1px rgba(0, 0, 0, .03), 0 1px 3px rgba(0, 0, 0, .05), 0 16px 24px rgba(0, 0, 0, .05)",
         highest: "0 0 0 1px rgba(0, 0, 0, .25), 0 1px 3px rgba(0, 0, 0, .05), 0 16px 24px rgba(0, 0, 0, .05)",
       },
