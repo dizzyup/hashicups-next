@@ -14,14 +14,16 @@ export default function CoffeeMenu(props) {
   const activeItem = 'coffee-' + props.isActive
   
   useEffect(() => {
-    scroller.scrollTo(activeItem, {
-      duration: 500,
-      delay: 50,
-      offset: -120,
-      smooth: true,
-      horizontal: true,
-      containerId: 'containerElement',
-    })
+    if (data) {
+      scroller.scrollTo(activeItem, {
+        duration: 500,
+        delay: 50,
+        offset: -120,
+        smooth: true,
+        horizontal: true,
+        containerId: 'containerElement',
+      })
+    }
   })
   
   return (
@@ -36,8 +38,8 @@ export default function CoffeeMenu(props) {
         <nav className="relative z-10 flex items-center justify-center px-0 bg-white/50 dark:bg-black/25 shadow-low dark:shadow-highlight">
           <Element id="containerElement" className="flex items-center h-[180px] overflow-x-auto scroll-style">
             {data && data.map((coffee) => (
-              <Element name={`coffee-${coffee.id}`} className="flex-shrink-0">
-                <CoffeeMenuItem coffee={coffee} key={coffee.id} isActive={props.isActive} />
+              <Element name={`coffee-${coffee.id}`} key={coffee.id} className="flex-shrink-0">
+                <CoffeeMenuItem coffee={coffee} isActive={props.isActive} />
               </Element>
             ))}
           </Element>
