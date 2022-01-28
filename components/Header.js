@@ -20,6 +20,26 @@ export default function Header() {
       <Head>
         <title>HashiCups - Demo App</title>
         <link rel="icon" href="/favicon.ico" />
+        <link
+          href={`/favicon-120.png`}
+          rel="apple-touch-icon-precomposed"
+          sizes="120x120"
+        />
+        <link
+          href={`/favicon-152.png`}
+          rel="apple-touch-icon-precomposed"
+          sizes="152x152"
+        />
+        <link
+          href={`/favicon-167.png`}
+          rel="apple-touch-icon-precomposed"
+          sizes="167x167"
+        />
+        <link
+          href={`/favicon-180.png`}
+          rel="apple-touch-icon-precomposed"
+          sizes="180x180"
+        />
       </Head>
       
       <header className="relative z-20 xs:z-50 flex flex-col items-center justify-center bg-white dark:bg-black/50 shadow-mid dark:shadow-highlight h-[120px] xs:h-[164px]">

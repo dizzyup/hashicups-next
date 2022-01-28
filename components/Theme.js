@@ -86,7 +86,7 @@ export default function Theme() {
         onClick={() => showSettings()}
       >
         <span className="flex items-center flex-shrink-0">
-          <Image src={theme == 'light' ? SunIcon : theme == 'dark' ? MoonIcon : MonitorIcon} />
+          <Image src={(theme == 'light' || theme == 'autoLight') ? SunIcon : (theme == 'dark' || theme == 'autoDark') ? MoonIcon : MonitorIcon} />
         </span>
         <span className="flex items-center flex-shrink-0 ml-0.5 opacity-75">
           <Image src={CaretIcon} />
